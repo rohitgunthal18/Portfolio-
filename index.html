@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Gunthal's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Discover my work and experience in the tech world.</p>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        <p>Hi, I'm Rohit Gunthal, a passionate computer science student at COCSIT College Latur. I am expected to graduate in 2025 and am currently looking for job opportunities.</p>
+        <button class="cta-button"><a href="https://drive.google.com/file/d/1_rb6eJI_kvvRm0ErE3VKfadILl0vsb1D/view?usp=drivesdk" target="_blank">Download Resume</a></button>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>e-Certified</h3>
+            <p>A website for finding online certifications, courses, and internships related to the computer science field. It includes a step-by-step guide.</p>
+            <button class="view-project-button">View Project</button>
+        </div>
+        <div class="project-card">
+            <h3>BookIt</h3>
+            <p>A website for selling eBooks with an integrated payment gateway.</p>
+            <button class="view-project-button">View Project</button>
+        </div>
+        <div class="project-card">
+            <h3>CSPoint</h3>
+            <p>A website providing college notes for download. Users can also upload missing notes if they are not available.</p>
+            <button class="view-project-button">View Project</button>
+        </div>
+        <div class="project-card">
+            <h3>Kedar Clinical Lab</h3>
+            <p>An app developed for booking appointments for a pathology lab.</p>
+            <button class="view-project-button">View Project</button>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <!-- Contact Form Start -->
+        <form method="post" name="contactform" class="contact-form">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Your Name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            
+            <button type="submit" class="send-message-button">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </form>
+        <!-- Contact Form End -->
+        <!-- social icon start -->
+        <div class="social-icons">
+            <a href="mailto:rohitgunthal1819@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/rohit-gunthal-8951a3244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/rohitgunthal18" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="tel:+8408088454" target="_blank" title="Call"><i class="fas fa-phone-alt"></i></a>
+        </div>
+        <!-- social icon end -->
+    </section>
+ 
+    <footer>
+        <p>&copy; 2024 Rohit Gunthal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-icon').onclick = function() {
+            var navMenu = document.getElementById('nav-menu');
+            if (navMenu.style.display === 'block') {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'block';
+            }
+        }
+    </script>
+    <!-- submit data script-->
+    <script>
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbwl4YjlCOnvDz52MMKtIPnI8zhIXOCZglMM-Tq5Iexr0JiwevEPw7FIgKUZifOd4Eyj/exec'
+			const form = document.forms['contactform']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})
+		  </script>
+    <!-- end script -->
+</body>
+</html>

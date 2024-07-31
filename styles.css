@@ -1,0 +1,240 @@
+body {
+    font-family: 'Courier Prime', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Light Gray */
+    color: #333333;
+}
+
+header {
+    background-color: #001f3f; /* Dark Navy Blue */
+    padding: 0.5em 1em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+#nav-menu {
+    background-color: #001f3f; /* Dark Navy Blue */
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-menu ul li {
+    margin: 10px 0;
+}
+
+#nav-menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+#nav-menu ul li a:hover {
+    color: #00aaff; /* Light Blue */
+}
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#home {
+    background: linear-gradient(to bottom, #001f3f, #003366); /* Dark Navy to Darker Blue */
+    color: #ffffff;
+    padding-top: 100px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 20px;
+    border: 5px solid #ffffff; /* White Border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Background Shadow */
+}
+
+.cta-button {
+    background-color: #001f3f; /* Dark Navy Blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0088cc; /* Darker Light Blue */
+}
+
+#projects {
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+#projects .project-card {
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#projects .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.view-project-button {
+    background-color: #00aaff; /* Light Blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.view-project-button:hover {
+    background-color: #0088cc; /* Darker Light Blue */
+}
+
+footer {
+    background-color: #001f3f; /* Dark Navy Blue */
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.7em; /* Smaller Font Size */
+    position: relative;
+    margin-top: 0px; /* Space above footer */
+}
+
+.contact-info {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.contact-info i {
+    color: #00aaff; /* Light Blue */
+    margin-right: 10px;
+}
+
+.social-icons {
+    font-size: 2em;
+}
+
+.social-icons a {
+    color: #001f3f;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00aaff; /* Light Blue */
+}
+
+@media (min-width: 768px) {
+    header nav ul li {
+        margin: 0 30px;
+    }
+}
+
+/* Contact Form CSS */
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #00aaff; /* Light Blue */
+    outline: none;
+}
+
+.send-message-button {
+    background-color: #00aaff; /* Light Blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-message-button i {
+    margin-right: 8px;
+}
+
+.send-message-button:hover {
+    background-color: #0088cc; /* Darker Light Blue */
+}
+
+/* Ensure buttons with links do not inherit default link styles */
+button a, .cta-button a, .view-project-button a, .send-message-button a {
+    color: inherit; /* Use the button's text color */
+    text-decoration: none; /* Remove underline */
+}
+
+button a:hover, .cta-button a:hover, .view-project-button a:hover, .send-message-button a:hover {
+    color: inherit; /* Ensure hover color does not override */
+    text-decoration: none; /* Remove underline on hover */
+}
